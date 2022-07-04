@@ -1,5 +1,6 @@
 package polymorphism;
 
+
 public class AppleSpeaker implements Speaker{
     public AppleSpeaker() {
         System.out.println("===> AppleSpeaker 객체생성");
