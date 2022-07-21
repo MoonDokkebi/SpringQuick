@@ -1,5 +1,6 @@
-package com.springbook.biz.board;
+package com.springbook.biz.board.impl;
 
+import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
 import org.springframework.stereotype.Repository;
 
@@ -19,9 +20,9 @@ public class BoardDAO {
     private ResultSet rs = null;
 
     //SQL 명령어들
-    private final String BOARD_INSERT = "insert into board(swq,title,writer,content)" +
+    private final String BOARD_INSERT = "insert into board(seq,title,writer,content)" +
             "values((select nvl(max(seq),0)+1 from board),?,?,?)";
-    private final String BOARD_UPDATE = "update board ser title = ?, content = ?, where seq = ?";
+    private final String BOARD_UPDATE = "update board set title = ?, content = ?, where seq = ?";
     private final String BOARD_DELETE = "delete board where seq = ?";
     private final String BOARD_GET = "select * from board where seq = ?";
     private final String BOARD_LIST = "select * from board order by seq desc";
