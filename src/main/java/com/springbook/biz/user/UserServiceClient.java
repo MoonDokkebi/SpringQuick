@@ -17,7 +17,7 @@ public class UserServiceClient {
         if (user != null){
             System.out.println(user.getName() + "님 환영합니다.");
         }else {
-            System.out.println("로그인 실패");
+            System.out.println("r그인 실패");
         }
         // 4. 스프링 컨테이너를 종료한다.
         container.close();
