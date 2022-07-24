@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class CollectionBeanClient {
     public static void main (String[] args){
-        AbstractApplicationContext factory = new GenericXmlApplicationContext("/web/WEB-INF/applicationContext.xml");
+        AbstractApplicationContext factory = new GenericXmlApplicationContext("/src/main/web/WEB-INF/applicationContext.xml");
 
         CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
         Properties addressList = bean.getAddressList();
