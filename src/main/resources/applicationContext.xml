@@ -12,12 +12,12 @@
 
     <context:component-scan base-package="com.springbook.biz"/>
 
-    <bean id = "around" class="com.springbook.biz.common.AroundAdvice"/>
+    <bean id = "before" class="com.springbook.biz.common.BeforeAdvice"/>
     <aop:config>
         <aop:pointcut id="allPointcut"
                       expression="execution(* com.springbook.biz..*Impl.*(..))"/>
-        <aop:aspect ref="around">
-            <aop:around pointcut-ref="allPointcut" method="aroundLog"/>
+        <aop:aspect ref="before">
+            <aop:around pointcut-ref="allPointcut" method="beforeLog"/>
         </aop:aspect>
     </aop:config>
     <bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"/>
