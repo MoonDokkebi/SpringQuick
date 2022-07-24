@@ -6,7 +6,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class UserServiceClient {
     public static void main(String[] args) {
         //1. 스프일 컨테이너 구동
-        AbstractApplicationContext container = new GenericXmlApplicationContext("/web/WEB-INF/applicationContext.xml");
+        AbstractApplicationContext container = new GenericXmlApplicationContext("/src/main/web/WEB-INF/applicationContext.xml");
         //2. 스프링 컨테이너로부터 UserServiceImpl 객체를 Lookup 한다.
         UserService userService = (UserService) container.getBean("userService");
         //3. 로그인기능 테스트
